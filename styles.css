@@ -25,9 +25,9 @@ dd {
 /* formatação corpo da página */
 body {
     font-family: 'Albert-sans', Arial, Helvetica, sans-serif;
-    width: 65vw;
     height: auto;
     max-width: 65vw;
+    width: 65vw;
     background-color: rgb(248, 179, 122);
     margin: 0 auto;
 
@@ -41,10 +41,10 @@ a {
     color: rgb(255, 255, 255);
     padding: 0.313rem;
     border-radius: 0.313rem;
-    margin-left: 45px;
     text-decoration: none;
     font-weight: 550;
-    max-width: 100%;
+    width: 900vw;
+    margin-right: 10px;
 
 
 }
@@ -71,11 +71,29 @@ a:hover {
 
 }
 
-#conteudo img {
-    width: 57vw;
-    border-radius: 3px;
-    flex-direction: column;
+#menu {
+    display: flex;
+    margin-bottom: 5px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    width: 65vw;
+    height: 45px;
+    padding: 0.625rem;
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 5px 5px 5px rgb(117, 117, 117);
+    justify-content: space-around;
+
 }
+
+/* formatação da imagem da página */
+#conteudo img {
+    width: 100%;
+    border-radius: 3px;
+    margin-bottom: 10px;
+
+}
+
+/* formatação conteudo página toda*/
 
 #conteudo {
 
@@ -83,6 +101,7 @@ a:hover {
     height: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     background-color: aliceblue;
     border-radius: 5px;
     padding: 60px;
@@ -90,27 +109,16 @@ a:hover {
     margin-bottom: 10px;
 }
 
-
+/* formatação h1 titulo da receita */
 .title_h {
     text-align: center;
     background-color: orange;
     border-radius: 5px;
     margin-bottom: 5px;
-    display: flex;
 }
 
 
-#cabecalho {
-
-    background-color: aliceblue;
-    padding: 0.313rem;
-    border-radius: 5px;
-    margin-bottom: 2px;
-    box-shadow: 5px 5px 5px rgb(117, 117, 117);
-
-}
-
-
+/*formatação das divs horizontais */
 .content {
 
     background-color: rgb(175, 175, 175);
@@ -124,6 +132,7 @@ a:hover {
     list-style-type: decimal;
     list-style-position: inside;
     margin-bottom: 10px;
+    width: 100%;
 
 }
 
@@ -132,25 +141,70 @@ a:hover {
     margin-bottom: 10px;
 }
 
-
-
-
-#menu {
-    display: flex;
-    margin-bottom: 5px;
-    background-color: aliceblue;
-    border-radius: 5px;
-    align-items: right;
-    width: 100%;
-    height: 45px;
-    padding: 0.625rem;
-    border-radius: 0px 0px 5px 5px;
-    box-shadow: 5px 5px 5px rgb(117, 117, 117);
-
-}
+/*formatação das divs de ingredientes e modo de preparo */
 
 #side {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        width: 100vw;
+        height: 100vw;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .content {
+
+        font-size: 16px;
+
+
+    }
+
+    a {
+        width: 100vw;
+        height: 100vw;
+        margin: 15px;
+
+    }
+
+    #menu {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    #side ul li {
+        font-size: 10px;
+    }
+
+    #side ul li {
+        font-size: 10px;
+    }
+
+    #side ol li {
+        font-size: 10px;
+    }
+
+    #conteudo {
+        flex-direction: column;
+        display: flex;
+    }
+
+    #menu ul {
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+    }
 }
