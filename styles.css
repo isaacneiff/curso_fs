@@ -28,7 +28,7 @@ body {
     height: auto;
     max-width: 65vw;
     width: 65vw;
-    background-color: rgb(248, 179, 122);
+    background-color: rgb(255, 220, 155);
     margin: 0 auto;
 
 }
@@ -80,17 +80,18 @@ a:hover {
     height: 45px;
     padding: 0.625rem;
     border-radius: 0px 0px 5px 5px;
-    box-shadow: 5px 5px 5px rgb(117, 117, 117);
+    box-shadow: 3px 3px 3px rgb(117, 117, 117);
     justify-content: space-around;
 
 }
 
 /* formatação da imagem da página */
 #conteudo img {
+
     width: 100%;
     border-radius: 3px;
     margin-bottom: 10px;
-
+    box-shadow: 1px 1px 1px rgb(117, 117, 117);
 }
 
 /* formatação conteudo página toda*/
@@ -104,9 +105,9 @@ a:hover {
     justify-content: center;
     background-color: aliceblue;
     border-radius: 5px;
-    padding: 60px;
-    box-shadow: 5px 5px 5px rgb(117, 117, 117);
-    margin-bottom: 10px;
+    padding: 45px;
+    box-shadow: 3px 3px 3px rgb(117, 117, 117);
+    margin-bottom: 3px;
 }
 
 /* formatação h1 titulo da receita */
@@ -149,7 +150,16 @@ a:hover {
     gap: 10px;
 }
 
-@media only screen and (max-width: 600px) {
+#foot_bar {
+
+    background-color: aliceblue;
+    text-align: center;
+    padding: 5px;
+    box-shadow: 3px 3px 3px rgb(117, 117, 117);
+    border-radius: 0.313rem 0.313rem 0 0;
+}
+
+@media only screen and (max-width: 830px) {
     body {
         width: 100vw;
         height: 100vw;
@@ -157,21 +167,28 @@ a:hover {
 
     h1 {
         text-align: center;
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    h2 {
+        text-align: center;
         font-size: 10px;
+    }
+
+    ol li {
+        padding: 2%;
     }
 
     .content {
 
         font-size: 16px;
 
-
     }
 
-    a {
-        width: 100vw;
-        height: 100vw;
-        margin: 15px;
-
+    a li {
+        width: 65vw;
+        height: 65vw;
     }
 
     #menu {
@@ -179,6 +196,7 @@ a:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 75vw;
     }
 
     h2 {
@@ -200,11 +218,23 @@ a:hover {
     #conteudo {
         flex-direction: column;
         display: flex;
+        width: 75vw;
+        padding: 10px;
     }
 
     #menu ul {
-        padding: 5px;
         display: flex;
         flex-direction: row;
+        text-align: left;
+    }
+
+    #side {
+        width: 70vw;
+        align-self: center;
+    }
+
+    #foot_bar {
+        width: 75vw;
+        font-size: 10px;
     }
 }
