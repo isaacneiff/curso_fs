@@ -28,14 +28,59 @@ body {
     height: auto;
     max-width: 65vw;
     width: 65vw;
-    background-color: rgb(255, 220, 155);
+    background-color: rgb(250, 243, 223);
     margin: 0 auto;
 
 }
 
+
 /* formatação dos links */
 
-a {
+
+#container {
+
+    width: 100%;
+    height: auto;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#container img {
+
+    box-shadow: 1px 1px 1px gray;
+    border-radius: 3px;
+    max-width: 100vw;
+    width: 100%;
+    height: 75vh;
+}
+
+#conteudo a {
+    background-color: orange;
+    color: rgb(0, 0, 0);
+    padding: 0.215rem;
+    border-radius: 0.313rem;
+    text-decoration: none;
+    font-weight: 550;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+    transition: background-color 0.7s, color 0.7s;
+    margin-bottom: 10px;
+}
+
+#conteudo a:hover {
+    background-color: rgb(175, 175, 175);
+    color: black;
+    cursor: pointer;
+}
+
+#menu a {
 
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
@@ -46,17 +91,22 @@ a {
     width: 900vw;
     margin-right: 10px;
 
+    &:hover {
 
+        transition: 0.7s;
+        background-color: aliceblue;
+        color: black;
+        cursor: pointer;
+    }
 }
 
-a:hover {
-
-    transition: 0.7s;
-    background-color: aliceblue;
-    color: black;
-    cursor: pointer;
-
+#h4 {
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    text-align: left;
 }
+
 
 /*formatação menu de navegação */
 
@@ -84,6 +134,9 @@ a:hover {
     justify-content: space-around;
 
 }
+
+
+
 
 /* formatação da imagem da página */
 #conteudo img {
@@ -144,7 +197,12 @@ a:hover {
 
 /*formatação das divs de ingredientes e modo de preparo */
 
-#side {
+.side a {
+    align-items: center;
+    display: flex;
+}
+
+.side {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 10px;
@@ -158,6 +216,7 @@ a:hover {
     box-shadow: 3px 3px 3px rgb(117, 117, 117);
     border-radius: 0.313rem 0.313rem 0 0;
 }
+
 
 @media only screen and (max-width: 830px) {
     body {
@@ -203,15 +262,11 @@ a:hover {
         font-size: 16px;
     }
 
-    #side ul li {
+    .side ul li {
         font-size: 10px;
     }
 
-    #side ul li {
-        font-size: 10px;
-    }
-
-    #side ol li {
+    .side ol li {
         font-size: 10px;
     }
 
@@ -228,7 +283,7 @@ a:hover {
         text-align: left;
     }
 
-    #side {
+    .side {
         width: 70vw;
         align-self: center;
     }
